@@ -1,0 +1,27 @@
+def rad_md(x,y,z):
+    num1 = x
+    num2 = y
+    num3 = z
+    count = 0
+    count2 = 0
+    count3 = 0
+    global rem
+    while num3 > 0:
+        if x >= 2 and y >= 1 and z >= 1:
+            num1 = (num1-2)
+            num2 = (num2-1)
+            num3 = (num3-1)
+            count = count + 1
+    while num2 > 0:
+        if num1 >= 3 and num2 >= 1:
+            num1 = (num1-3)
+            num2 = (num2-1)
+            count2 = count2 + 1
+    while num1 > 4:
+        if num1 >= 4:
+            num1 = (num1-4)
+            count3 = count3 + 1
+    
+    if num1 < 4:
+        rem = num1
+    return print('{} Option 1, {} Option 2, {} Option 3, {} 97110 remaining'.format(count, count2, count3, rem))
